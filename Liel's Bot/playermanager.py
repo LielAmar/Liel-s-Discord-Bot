@@ -21,7 +21,7 @@ def sort_list(list):
     return list
 
 # ========== VARIABLES ==========
-db = mysql.connector.connect(host="localhost", user="liel", passwd="D6qOECc7KOPTJ14h", database="bot") # database connection
+db = mysql.connector.connect(host="localhost", user="liel", passwd="<password>", database="bot") # database connection
 players = [] # list of players
 
 # ========== CLASSES ==========
@@ -79,7 +79,7 @@ async def add_exp(discord, member, player, current_time):
 
     while levelUp(player):
         embed = getPlayerStats(discord, member, player, "levelup")
-        
+
         await channel.send(embed=embed)
         await updateRoles(member, player)
 
